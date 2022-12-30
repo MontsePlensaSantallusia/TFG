@@ -127,7 +127,7 @@ SD$num <- c(1:nrow(SD))
 WOS$num <- c(1:nrow(WOS))
 PUBMED$num <- c(1:nrow(PUBMED))
 
-SD[3,1] <- "Évaluation des blessures musculosquelettiques en « trail-running » chez deux populations amateurs d'experts et de novices définies par clustering : étude pilote"
+SD[3,1] <- "Ã‰valuation des blessures musculosquelettiques en Â« trail-running Â» chez deux populations amateurs d'experts et de novices dÃ©finies par clustering : Ã©tude pilote"
 SD[1,1] <- "The 'SHRed Injuries Basketball' Neuromuscular Training Warm-up Program Reduces Ankle and Knee Injury Rates by 36% in Youth Basketball"
 CINAHL[9,1] <- "The 'SHRed Injuries Basketball' Neuromuscular Training Warm-up Program Reduces Ankle and Knee Injury Rates by 36% in Youth Basketball"
 PUBMED[57,1] <- "A CLUSTER RANDOMIZED CONTROLLED TRIAL TO REDUCE OFFICE WORKERS' SITTING TIME: EFFECT ON ACTIVITY OUTCOMES"
@@ -249,7 +249,7 @@ rownames(ARTICLES) <- c(1:nrow(ARTICLES))
 
 ### RESULTS
 
-carac <- read_excel("F:/ESTADÍSTICA/5è CURS/2n QUATRI/TFG/BBDD/carac07.xlsx")
+carac <- read_excel("F:/ESTADÃSTICA/5Ã¨ CURS/2n QUATRI/TFG/BBDD/carac07.xlsx")
 # View(carac)
 str(carac)
 carac <- as.data.frame(carac)
@@ -381,7 +381,7 @@ carac[carac$`Method to decide the number of clusters` == "CH Index","Method to d
 carac[carac$`Method to decide the number of clusters` == "Clustergram | dendrogram","Method to decide the number of clusters"] <- "others"
 carac[carac$`Method to decide the number of clusters` == "Elbow | BIC","Method to decide the number of clusters"] <- "others"
 carac[carac$`Method to decide the number of clusters` == "Elbow | Silhouette","Method to decide the number of clusters"] <- "others"
-carac[carac$`Method to decide the number of clusters` == "Fréchet mean","Method to decide the number of clusters"] <- "others"
+carac[carac$`Method to decide the number of clusters` == "FrÃ©chet mean","Method to decide the number of clusters"] <- "others"
 carac[carac$`Method to decide the number of clusters` == "Johnson's dendrogram","Method to decide the number of clusters"] <- "dendrogram"
 carac[carac$`Method to decide the number of clusters` == "Point biserial correlation | C-Index","Method to decide the number of clusters"] <- "others"
 carac[carac$`Method to decide the number of clusters` == "Silhouette | Calinski-Harabasz","Method to decide the number of clusters"] <- "others"
@@ -594,7 +594,7 @@ boxplot(k2$centers[,6], main = "% total rebots")
 
 # AST_pct
 
-boxplot(k2$centers[,7], main = "% assistències")
+boxplot(k2$centers[,7], main = "% assistÃ¨ncies")
 (AST_min2 <- ggplot(wnba_final, aes(x = cluster, y = AST_pct, fill = cluster)) + 
     geom_boxplot())
 
@@ -612,31 +612,31 @@ boxplot(k2$centers[,9], main = "% taps")
 
 # TOV_pct per minute
 
-boxplot(k2$centers[,10], main = "% canvis de possessió per minut")
+boxplot(k2$centers[,10], main = "% canvis de possessiÃ³ per minut")
 (TOV_min2 <- ggplot(wnba_final, aes(x = cluster, y = TOV_pct, fill = cluster)) + 
     geom_boxplot())
 
 # USG_pct
 
-boxplot(k2$centers[,11], main = "% ús")
+boxplot(k2$centers[,11], main = "% Ãºs")
 (USG_min2 <- ggplot(wnba_final, aes(x = cluster, y = USG_pct, fill = cluster)) + 
     geom_boxplot())
 
 # OWS 
 
-boxplot(k2$centers[,12], main = "% victòries ofensives")
+boxplot(k2$centers[,12], main = "% victÃ²ries ofensives")
 (OWS_min2 <- ggplot(wnba_final, aes(x = cluster, y = OWS, fill = cluster)) + 
     geom_boxplot())
 
 # DWS 
 
-boxplot(k2$centers[,13], main = "% victòries defensives")
+boxplot(k2$centers[,13], main = "% victÃ²ries defensives")
 (DWS_min2 <- ggplot(wnba_final, aes(x = cluster, y = DWS, fill = cluster)) + 
     geom_boxplot())
 
 # WS 
 
-boxplot(k2$centers[,14], main = "% victòries")
+boxplot(k2$centers[,14], main = "% victÃ²ries")
 (WS_min2 <- ggplot(wnba_final, aes(x = cluster, y = WS, fill = cluster)) + 
     geom_boxplot())
 
